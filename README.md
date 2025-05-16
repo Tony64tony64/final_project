@@ -27,13 +27,47 @@ This project follows the MVVM (Model-View-ViewModel) architecture pattern:
 
 ```
 lib/
-├── add_item/
-│   ├── add_item_screen.dart    # Add note screen
-│   ├── item_model.dart         # Note model
-│   └── item.dart              # Item data class
-├── dashboard/
-│   └── nav_bar.dart           # Navigation bar
-└── main.dart                  # Application entry point
+├── core/
+│   ├── constants/            
+│   │   ├── api_constants.dart
+│   │   └── app_constants.dart
+│   ├── utils/                
+│   │   ├── validators.dart
+│   │   └── helpers.dart
+│   └── services/             
+│       ├── storage_service.dart
+│       └── api_service.dart
+│
+├── features/                 
+│   ├── add_item/           
+│   │   ├── models/
+│   │   │   └── item.dart
+│   │   ├── viewmodels/
+│   │   │   └── item_model.dart
+│   │   └── views/
+│   │       └── add_item_screen.dart
+│   │
+│   ├── dashboard/          
+│   │   ├── models/
+│   │   ├── viewmodels/
+│   │   │   └── dashboard_viewmodel.dart
+│   │   └── views/
+│   │       ├── dashboard_screen.dart
+│   │       └── nav_bar.dart
+│   │
+│   └── favorites/         
+│       ├── models/
+│       ├── viewmodels/
+│       └── views/
+│
+├── shared/                
+│   ├── widgets/           
+│   │   ├── custom_button.dart
+│   │   └── custom_text_field.dart
+│   └── theme/            
+│       └── app_theme.dart
+│
+└── main.dart            
 ```
 
 ## Dependencies
@@ -49,17 +83,12 @@ dependencies:
 
 ## Getting Started
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/flutter-notes-app.git
-```
-
-2. Install dependencies:
+1. Install dependencies:
 ```bash
 flutter pub get
 ```
 
-3. Run the app:
+2. Run the app:
 ```bash
 flutter run
 ```
@@ -90,6 +119,3 @@ The app uses Provider for state management. The `ItemModel` class serves as the 
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
