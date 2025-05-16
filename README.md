@@ -27,47 +27,52 @@ This project follows the MVVM (Model-View-ViewModel) architecture pattern:
 
 ```
 lib/
-├── core/
-│   ├── constants/            
-│   │   ├── api_constants.dart
-│   │   └── app_constants.dart
-│   ├── utils/                
-│   │   ├── validators.dart
-│   │   └── helpers.dart
-│   └── services/             
-│       ├── storage_service.dart
-│       └── api_service.dart
+├── add_item/
+│   ├── add_item_screen.dart    
+│   ├── Item_model.dart        
+│   └── item.dart               
 │
-├── features/                 
-│   ├── add_item/           
-│   │   ├── models/
-│   │   │   └── item.dart
-│   │   ├── viewmodels/
-│   │   │   └── item_model.dart
-│   │   └── views/
-│   │       └── add_item_screen.dart
-│   │
-│   ├── dashboard/          
-│   │   ├── models/
-│   │   ├── viewmodels/
-│   │   │   └── dashboard_viewmodel.dart
-│   │   └── views/
-│   │       ├── dashboard_screen.dart
-│   │       └── nav_bar.dart
-│   │
-│   └── favorites/         
-│       ├── models/
-│       ├── viewmodels/
-│       └── views/
+├── dashboard/
+│   ├── dashboard_screen.dart  
+│   ├── nav_bar.dart           
+│   └── SectionScreen.dart     
 │
-├── shared/                
-│   ├── widgets/           
-│   │   ├── custom_button.dart
-│   │   └── custom_text_field.dart
-│   └── theme/            
-│       └── app_theme.dart
+├── details/
+│   ├── details_screen/
+│   │   └── details_page.dart   
+│   └── details_widget/
+│       ├── favorite.dart      
+│       ├── season.dart         
+│       └── details_widget.dart 
 │
-└── main.dart            
+├── favorite/
+│   ├── favorite_screen.dart    
+│   └── favorite_model.dart     
+│
+├── login/
+│   └── login_screen.dart       
+│
+├── profile/
+│   ├── profile_page/
+│   │   ├── profile_page.dart   
+│   │   └── options.dart        
+│   ├── profile_widget/         
+│   ├── user_model.dart        
+│   └── user.dart              
+│
+├── qoute/
+│   ├── qoute_screen.dart      
+│   ├── quote.dart             
+│   └── service.dart           
+│
+├── signup/
+│   └── signup_screen.dart     
+│
+├── splash/
+│   └── splash_screen.dart    
+│
+├── HeartScreen.dart          
+└── main.dart                  
 ```
 
 ## Dependencies
@@ -76,9 +81,12 @@ lib/
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.0.0
-  shared_preferences: ^2.0.0
-  http: ^0.13.0
+  cupertino_icons: ^1.0.8
+  image_picker: ^0.8.4+5
+  path_provider: ^2.1.1
+  provider: ^6.1.5
+  http: ^1.4.0
+  shared_preferences: ^2.1.1
 ```
 
 ## Getting Started
